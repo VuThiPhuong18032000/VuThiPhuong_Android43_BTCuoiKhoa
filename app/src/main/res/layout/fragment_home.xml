@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/fragmentHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:background="#F13979">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="3dp"
+            android:orientation="horizontal"
+            android:background="@drawable/custom_backgroud_timkiem">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvTimKiem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:hint="Bố mẹ tìm gì cho bé?"
+                android:textSize="15dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/custom_backgroud_timkiem"/>
+
+            <Button
+                android:id="@+id/btnTimKiem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_baseline_search_24" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.04"
+        android:background="#4EBF52"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_baseline_phone_in_talk_24"
+                android:layout_margin="6dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:text="1900 10 10 10"
+                android:gravity="center_vertical"
+                android:textSize="18dp"
+                android:textColor="#AE1D13"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_DiaChiShop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_baseline_other_houses_24"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:text="Địa chỉ"
+                android:gravity="center_vertical"
+                android:textSize="18dp"
+                android:textColor="#AE1D13"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="0dp"
+        android:layout_weight="0.95"
+        android:background="#FBE8EF">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginHorizontal="10dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:id="@+id/rcvTimKiem"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SẢN PHẨM NỔI BẬT"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:background="#F19DB9"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/rcvSPNoiBat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SẢN PHẨM BÁN CHẠY"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:background="#F19DB9"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/rcvSPBanChay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUẦN ÁO BÉ TRAI"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:background="#F19DB9"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/rcvQABeTrai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUẦN ÁO BÉ GÁI"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:background="#F19DB9"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/rcvQABeGai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUẦN ÁO SƠ SINH"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:background="#F19DB9"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/rcvQASoSinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
